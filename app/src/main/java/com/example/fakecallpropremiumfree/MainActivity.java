@@ -15,12 +15,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void random(View view) {
-        android.content.Intent intent = new android.content.Intent(this, SecondActivity.class);
-        startActivity(intent);
+        switch_activity(SecondActivity.class);
     }
 
     public void selected(View view) {
-        android.content.Intent intent = new android.content.Intent(this, FourthActivity.class);
+        switch_activity(FourthActivity.class);
+    }
+    // Switching to call screen or the call settings screen
+    private void switch_activity(Class activity){
+        android.content.Intent intent = new android.content.Intent(this, activity);
         startActivity(intent);
     }
 

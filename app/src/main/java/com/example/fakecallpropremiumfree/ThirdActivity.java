@@ -10,15 +10,15 @@ public class ThirdActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String data1;
+        // Setting callers name to be displayed on the accepted call screen
+        String name = "";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
         Bundle extras = getIntent().getExtras();
-        data1 = "";
         if (extras != null) {
-            data1 = extras.getString("nimi");
+            name = extras.getString("name");
         }
         android.widget.TextView theTextView = (android.widget.TextView) findViewById(R.id.textView);
-        theTextView.setText(data1);
+        theTextView.setText(name);
     }
 }
