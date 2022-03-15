@@ -1,7 +1,9 @@
 package com.example.fakecallpropremiumfree;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import java.io.*;
@@ -13,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     public void random(View view) {
         switch_activity(SecondActivity.class);
     }
